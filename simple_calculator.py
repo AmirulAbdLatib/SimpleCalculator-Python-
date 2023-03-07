@@ -15,14 +15,10 @@ def operation(n1,n2,operator):
 
 #############SIMPLE CALCULATOR########################
 while True:
-    print("Enter number 1:")
-    num1 = input()
-    print("Choose an operator (add/subtract/multiply/divide/power):")
-    sign = input()
-    print("Enter number 2:")
-    num2 = input()
+    num1 = input("Enter number 1:")
+    sign = input("Choose an operator (add/subtract/multiply/divide/power):")
+    num2 = input("Enter number 2:")
     operation(num1,num2,sign.lower())
-
 
     char = input('Do you want to continue (Y/N):')
 
