@@ -23,8 +23,8 @@ while True:
     num2 = input()
     operation(num1,num2,sign.lower())
 
-    print('Do you want to continue (Y/N):')
-    char = input
+
+    char = input('Do you want to continue (Y/N):')
 
     if char=='n' or char=='N':
         break
