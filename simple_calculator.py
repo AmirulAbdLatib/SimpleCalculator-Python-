@@ -7,7 +7,11 @@ def operation(n1,n2,operator):
     elif operator=='multiply':
         result = float(n1) * float(n2)
     elif operator=='divide':
-        result = float(n1)/float(n2)
+       try:
+            result = float(n1)/float(n2)
+        except ZeroDivisionError:
+            print("Cannot divide zero , the second number cannot be zero in divide operation")
+            return
     elif operator=='power':
         result = float(n1)**float(n2)
     
