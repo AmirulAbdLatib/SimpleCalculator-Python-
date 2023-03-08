@@ -9,7 +9,7 @@ def operation(n1,n2,operator):
     elif operator=='divide':
        try:
             result = float(n1)/float(n2)
-        except ZeroDivisionError:
+       except ZeroDivisionError:
             print("Cannot divide zero , the second number cannot be zero in divide operation")
             return
     elif operator=='power':
@@ -19,12 +19,16 @@ def operation(n1,n2,operator):
 
 #############SIMPLE CALCULATOR########################
 while True:
-    num1 = input("Enter number 1:")
-    sign = input("Choose an operator (add/subtract/multiply/divide/power):")
-    num2 = input("Enter number 2:")
-    operation(num1,num2,sign.lower())
+    try:
+        num1 = input("Enter number 1:")
+        sign = input("Choose an operator (add/subtract/multiply/divide/power):")
+        num2 = input("Enter number 2:")
+        operation(num1,num2,sign.lower())
+    except ValueError:
+        print("Invalid value. Please enter valid value.")
+    except:
+        print("There is error!")
 
     char = input('Do you want to continue (Y/N):')
-
     if char=='n' or char=='N':
         break
